@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/tensorhero/tinygpt-tester/internal/stages"
-	tester_utils "github.com/tensorhero/tester-utils"
+	"github.com/tensorhero-cn/tinygpt-tester/internal/stages"
+	tester_utils "github.com/tensorhero-cn/tester-utils"
 )
 
 func main() {
