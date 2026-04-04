@@ -31,10 +31,10 @@ make test-solutions
 
 ```bash
 # Build image
-docker build -t ghcr.io/tensorhero-cn/tinygpt-tester .
+docker build -t ghcr.io/bootcraft-cn/tinygpt-tester .
 
 # Run
-docker run --rm -v /path/to/submission:/workspace ghcr.io/tensorhero-cn/tinygpt-tester -s tokenization -d /workspace
+docker run --rm -v /path/to/submission:/workspace ghcr.io/bootcraft-cn/tinygpt-tester -s tokenization -d /workspace
 ```
 
 ## Development

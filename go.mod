@@ -1,8 +1,8 @@
-module github.com/tensorhero-cn/tinygpt-tester
+module github.com/bootcraft-cn/tinygpt-tester
 
 go 1.24
 
-require github.com/tensorhero-cn/tester-utils v1.7.0
+require github.com/bootcraft-cn/tester-utils v1.8.0
 
 require (
 	github.com/creack/pty v1.1.24 // indirect

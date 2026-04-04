@@ -52,14 +52,14 @@ jobs:
           platforms: linux/amd64
           push: false
           load: true
-          tags: ghcr.io/tensorhero-cn/tinygpt-tester:test
+          tags: ghcr.io/bootcraft-cn/tinygpt-tester:test
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Checkout solution (java branch)
         uses: actions/checkout@v4
         with:
-          repository: tensorhero-cn/tinygpt-solution
+          repository: bootcraft-cn/tinygpt-solution
           token: ${{ secrets.SOLUTION_REPO_PAT }}
           ref: java
           path: solution-java
@@ -67,7 +67,7 @@ jobs:
       - name: Checkout solution (python branch)
         uses: actions/checkout@v4
         with:
-          repository: tensorhero-cn/tinygpt-solution
+          repository: bootcraft-cn/tinygpt-solution
           token: ${{ secrets.SOLUTION_REPO_PAT }}
           ref: python
           path: solution-python
@@ -88,7 +88,7 @@ jobs:
               TOTAL=$((TOTAL + 1))
               find "$(pwd)/solution-${lang}" -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
               echo "Testing ${stage} (${lang})..."
-              if docker run --rm --user $(id -u):$(id -g) -v "$(pwd)/solution-${lang}:/workspace" ghcr.io/tensorhero-cn/tinygpt-tester:test \
+              if docker run --rm --user $(id -u):$(id -g) -v "$(pwd)/solution-${lang}:/workspace" ghcr.io/bootcraft-cn/tinygpt-tester:test \
                 -s "$stage" -d /workspace; then
                 echo "✓ ${stage} (${lang}) passed"
               else
